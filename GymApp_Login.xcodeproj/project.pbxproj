@@ -12,6 +12,11 @@
 		27F13C612BAB7DAD00D37235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27F13C602BAB7DAD00D37235 /* Assets.xcassets */; };
 		27F13C642BAB7DAD00D37235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27F13C632BAB7DAD00D37235 /* Preview Assets.xcassets */; };
 		27F13C732BAB7E7F00D37235 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C722BAB7E7F00D37235 /* LoginView.swift */; };
+		27F13C752BAB7FF500D37235 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C742BAB7FF500D37235 /* InputView.swift */; };
+		27F13C772BAB858900D37235 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C762BAB858900D37235 /* RegistrationView.swift */; };
+		27F13C792BAB87E000D37235 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C782BAB87E000D37235 /* ProfileView.swift */; };
+		27F13C7B2BAB8AD200D37235 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C7A2BAB8AD200D37235 /* SettingsRowView.swift */; };
+		27F13C7D2BAB8C8300D37235 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C7C2BAB8C8300D37235 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		27F13C602BAB7DAD00D37235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27F13C632BAB7DAD00D37235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27F13C722BAB7E7F00D37235 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		27F13C742BAB7FF500D37235 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		27F13C762BAB858900D37235 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		27F13C782BAB87E000D37235 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		27F13C7A2BAB8AD200D37235 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		27F13C7C2BAB8C8300D37235 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,8 @@
 		27F13C6B2BAB7DCD00D37235 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				27F13C742BAB7FF500D37235 /* InputView.swift */,
+				27F13C7A2BAB8AD200D37235 /* SettingsRowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -99,6 +111,7 @@
 		27F13C6D2BAB7DDC00D37235 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				27F13C7C2BAB8C8300D37235 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				27F13C722BAB7E7F00D37235 /* LoginView.swift */,
+				27F13C762BAB858900D37235 /* RegistrationView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -122,6 +136,7 @@
 		27F13C712BAB7E5000D37235 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				27F13C782BAB87E000D37235 /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -197,8 +212,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				27F13C732BAB7E7F00D37235 /* LoginView.swift in Sources */,
+				27F13C752BAB7FF500D37235 /* InputView.swift in Sources */,
 				27F13C5F2BAB7DAA00D37235 /* ContentView.swift in Sources */,
 				27F13C5D2BAB7DAA00D37235 /* GymApp_LoginApp.swift in Sources */,
+				27F13C7D2BAB8C8300D37235 /* User.swift in Sources */,
+				27F13C792BAB87E000D37235 /* ProfileView.swift in Sources */,
+				27F13C772BAB858900D37235 /* RegistrationView.swift in Sources */,
+				27F13C7B2BAB8AD200D37235 /* SettingsRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
