@@ -28,6 +28,7 @@
 		27F13C922BAB991800D37235 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 27F13C912BAB991800D37235 /* FirebaseAuthCombine-Community */; };
 		27F13C942BAB991800D37235 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 27F13C932BAB991800D37235 /* FirebaseDatabase */; };
 		27F13C962BAB991800D37235 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 27F13C952BAB991800D37235 /* FirebaseDatabaseSwift */; };
+		27F13C982BABAFCC00D37235 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C972BABAFCB00D37235 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		27F13C7C2BAB8C8300D37235 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		27F13C7E2BAB918700D37235 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "GymApp_Login/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		27F13C8B2BAB93DA00D37235 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		27F13C972BABAFCB00D37235 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				27F13C762BAB858900D37235 /* RegistrationView.swift */,
 				27F13C722BAB7E7F00D37235 /* LoginView.swift */,
+				27F13C972BABAFCB00D37235 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				27F13C732BAB7E7F00D37235 /* LoginView.swift in Sources */,
 				27F13C752BAB7FF500D37235 /* InputView.swift in Sources */,
 				27F13C5F2BAB7DAA00D37235 /* ContentView.swift in Sources */,
+				27F13C982BABAFCC00D37235 /* HomeView.swift in Sources */,
 				27F13C5D2BAB7DAA00D37235 /* GymApp_LoginApp.swift in Sources */,
 				27F13C7D2BAB8C8300D37235 /* User.swift in Sources */,
 				27F13C792BAB87E000D37235 /* ProfileView.swift in Sources */,
