@@ -25,6 +25,7 @@ struct HomeView: View {
                     } label: {
                         WorkoutRowView(imageName: "plus.circle.fill", title: "Add Workout", tintColor: .blue)
                     }
+                    .listRowBackground(Color.white)
                     
                     // Button for viewing workouts
                     Button {
@@ -32,6 +33,7 @@ struct HomeView: View {
                     } label: {
                         WorkoutRowView(imageName: "eye", title: "View Workout", tintColor: .blue)
                     }
+                    .listRowBackground(Color.white)
                 }
                 
                 Section("Settings") {
@@ -41,6 +43,7 @@ struct HomeView: View {
                     } label: {
                         WorkoutRowView(imageName: "gear", title: "Settings", tintColor: Color.gray)
                     }
+                    .listRowBackground(Color.white) 
                 }
             }
             .navigationTitle("Home")
@@ -62,20 +65,6 @@ struct HomeView: View {
                 NavigationLink(destination: ProfileView(), isActive: $shouldNavigateToProfile) { EmptyView() }.hidden()
             )
         }
-    }
-}
-
-// FOR TESTING PURPOSE ONLY
-
-struct AddWorkoutView: View {
-    var body: some View {
-        Text("Add Workout View")
-    }
-}
-
-struct ViewWorkoutView: View {
-    var body: some View {
-        Text("View Workout View")
     }
 }
 

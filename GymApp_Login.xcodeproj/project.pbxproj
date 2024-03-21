@@ -30,6 +30,8 @@
 		27F13C962BAB991800D37235 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 27F13C952BAB991800D37235 /* FirebaseDatabaseSwift */; };
 		27F13C982BABAFCC00D37235 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C972BABAFCB00D37235 /* HomeView.swift */; };
 		27F13C9A2BAC7C3B00D37235 /* WorkoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C992BAC7C3B00D37235 /* WorkoutRowView.swift */; };
+		27F13C9C2BAC8FF300D37235 /* ViewWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C9B2BAC8FF300D37235 /* ViewWorkoutView.swift */; };
+		27F13C9E2BAC900000D37235 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C9D2BAC900000D37235 /* AddWorkoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		27F13C8B2BAB93DA00D37235 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		27F13C972BABAFCB00D37235 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		27F13C992BAC7C3B00D37235 /* WorkoutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRowView.swift; sourceTree = "<group>"; };
+		27F13C9B2BAC8FF300D37235 /* ViewWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWorkoutView.swift; sourceTree = "<group>"; };
+		27F13C9D2BAC900000D37235 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 				27F13C762BAB858900D37235 /* RegistrationView.swift */,
 				27F13C722BAB7E7F00D37235 /* LoginView.swift */,
 				27F13C972BABAFCB00D37235 /* HomeView.swift */,
+				27F13C9B2BAC8FF300D37235 /* ViewWorkoutView.swift */,
+				27F13C9D2BAC900000D37235 /* AddWorkoutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27F13C732BAB7E7F00D37235 /* LoginView.swift in Sources */,
+				27F13C9C2BAC8FF300D37235 /* ViewWorkoutView.swift in Sources */,
 				27F13C752BAB7FF500D37235 /* InputView.swift in Sources */,
 				27F13C5F2BAB7DAA00D37235 /* ContentView.swift in Sources */,
 				27F13C982BABAFCC00D37235 /* HomeView.swift in Sources */,
@@ -282,6 +289,7 @@
 				27F13C772BAB858900D37235 /* RegistrationView.swift in Sources */,
 				27F13C9A2BAC7C3B00D37235 /* WorkoutRowView.swift in Sources */,
 				27F13C7B2BAB8AD200D37235 /* SettingsRowView.swift in Sources */,
+				27F13C9E2BAC900000D37235 /* AddWorkoutView.swift in Sources */,
 				27F13C8C2BAB93DA00D37235 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
