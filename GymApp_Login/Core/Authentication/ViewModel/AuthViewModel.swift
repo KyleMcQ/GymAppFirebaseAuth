@@ -18,6 +18,7 @@ protocol AuthenticationFormProtocol{
 class AuthViewModel: ObservableObject{
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
+    @Published var userWorkouts: [Workout] = []
     
     init(){
         self.userSession = Auth.auth().currentUser
@@ -74,4 +75,30 @@ class AuthViewModel: ObservableObject{
         
         
     }
+    // Adds a new workout to Firestore
+    func addWorkout(exercise: String, reps: Int, weight: Double) {
+        guard let userID = self.userSession?.uid else { return }
+           
+        let workout = Workout(userID: userID, exercise: exercise, reps: reps, weight: weight)
+        do {
+            let _ = try Firestore.firestore().collection("workouts").addDocument(from: workout)
+        } catch {
+               print("DEBUG: Failed to add workout with error \(error.localizedDescription)")
+           }
+       }
+    
+    func fetchWorkouts() async {
+        guard let userID = self.userSession?.uid else { return }
+
+        let workoutsCollection = Firestore.firestore().collection("workouts")
+        do {
+            let snapshot = try await workoutsCollection.whereField("userID", isEqualTo: userID).getDocuments()
+            self.userWorkouts = snapshot.documents.compactMap { document in
+                try? document.data(as: Workout.self)
+            }
+        } catch {
+            print("DEBUG: Failed to fetch workouts with error \(error.localizedDescription)")
+        }
+    }
+    
 }
