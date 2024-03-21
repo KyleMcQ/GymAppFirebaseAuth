@@ -29,6 +29,7 @@
 		27F13C942BAB991800D37235 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 27F13C932BAB991800D37235 /* FirebaseDatabase */; };
 		27F13C962BAB991800D37235 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 27F13C952BAB991800D37235 /* FirebaseDatabaseSwift */; };
 		27F13C982BABAFCC00D37235 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C972BABAFCB00D37235 /* HomeView.swift */; };
+		27F13C9A2BAC7C3B00D37235 /* WorkoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F13C992BAC7C3B00D37235 /* WorkoutRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		27F13C7E2BAB918700D37235 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "GymApp_Login/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		27F13C8B2BAB93DA00D37235 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		27F13C972BABAFCB00D37235 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		27F13C992BAC7C3B00D37235 /* WorkoutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				27F13C742BAB7FF500D37235 /* InputView.swift */,
 				27F13C7A2BAB8AD200D37235 /* SettingsRowView.swift */,
+				27F13C992BAC7C3B00D37235 /* WorkoutRowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				27F13C7D2BAB8C8300D37235 /* User.swift in Sources */,
 				27F13C792BAB87E000D37235 /* ProfileView.swift in Sources */,
 				27F13C772BAB858900D37235 /* RegistrationView.swift in Sources */,
+				27F13C9A2BAC7C3B00D37235 /* WorkoutRowView.swift in Sources */,
 				27F13C7B2BAB8AD200D37235 /* SettingsRowView.swift in Sources */,
 				27F13C8C2BAB93DA00D37235 /* AuthViewModel.swift in Sources */,
 			);

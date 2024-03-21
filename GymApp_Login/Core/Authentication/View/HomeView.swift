@@ -8,24 +8,79 @@
 import SwiftUI
 
 struct HomeView: View {
+    let username: String = "Shane McQuillan"
+    
+    // State variables for navigation
+    @State private var shouldNavigateToAddWorkout = false
+    @State private var shouldNavigateToViewWorkout = false
+    @State private var shouldNavigateToProfile = false
+
     var body: some View {
-        NavigationStack{
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            
-            NavigationLink{
-                ProfileView()
-            } label: {
-                HStack(spacing: 3){
-                    Text("Click Here to View ")
-                    Text("User Settings")
-                        .fontWeight(.bold)
+        NavigationStack {
+            List {
+                Section("Workouts") {
+                    // Button for adding a workout
+                    Button {
+                        shouldNavigateToAddWorkout = true
+                    } label: {
+                        WorkoutRowView(imageName: "plus.circle.fill", title: "Add Workout", tintColor: .blue)
+                    }
+                    
+                    // Button for viewing workouts
+                    Button {
+                        shouldNavigateToViewWorkout = true
+                    } label: {
+                        WorkoutRowView(imageName: "eye", title: "View Workout", tintColor: .blue)
+                    }
                 }
-                .font(.system(size:14))
+                
+                Section("Settings") {
+                    // Button for settings
+                    Button {
+                        shouldNavigateToProfile = true
+                    } label: {
+                        WorkoutRowView(imageName: "gear", title: "Settings", tintColor: Color.gray)
+                    }
+                }
             }
+            .navigationTitle("Home")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Text(username)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
+            // Hidden navigation links that are activated by the buttons
+            .background(
+                NavigationLink(destination: AddWorkoutView(), isActive: $shouldNavigateToAddWorkout) { EmptyView() }.hidden()
+            )
+            .background(
+                NavigationLink(destination: ViewWorkoutView(), isActive: $shouldNavigateToViewWorkout) { EmptyView() }.hidden()
+            )
+            .background(
+                NavigationLink(destination: ProfileView(), isActive: $shouldNavigateToProfile) { EmptyView() }.hidden()
+            )
         }
     }
 }
 
-#Preview {
-    HomeView()
+// FOR TESTING PURPOSE ONLY
+
+struct AddWorkoutView: View {
+    var body: some View {
+        Text("Add Workout View")
+    }
+}
+
+struct ViewWorkoutView: View {
+    var body: some View {
+        Text("View Workout View")
+    }
+}
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+    }
 }

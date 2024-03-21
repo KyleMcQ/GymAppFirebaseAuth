@@ -61,19 +61,6 @@ struct ProfileView: View {
                         SettingsRowView(imageName: "xmark.circle.fill", title: "Delete Account", tintColor: .red)
                     }
                 }
-                
-                Section("Workouts"){
-                    Button{
-                        viewModel.signOut()
-                    } label: {
-                        SettingsRowView(imageName: "eye", title: "View Workouts", tintColor: .gray)
-                    }
-                    Button{
-                        print("")
-                    } label: {
-                        SettingsRowView(imageName: "plus.app", title: "Add Workout", tintColor: .red)
-                    }
-                }
             }
         }
     }
