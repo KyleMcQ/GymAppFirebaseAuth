@@ -17,6 +17,7 @@ struct ViewWorkoutView: View {
                     .font(.headline)
                 Text("Reps: \(workout.reps)")
                 Text("Weight: \(workout.weight)")
+                Text("Date: \(workout.date)")
             }
         }
         .onAppear {

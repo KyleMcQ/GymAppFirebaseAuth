@@ -63,8 +63,38 @@ class AuthViewModel: ObservableObject{
         }
     }
     
-    func deleteAccount(){
-        
+    func deleteAccount() {
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+
+        // Fetch user's workouts
+        let workoutsCollection = Firestore.firestore().collection("workouts")
+        workoutsCollection.whereField("userID", isEqualTo: userID).getDocuments { snapshot, error in
+            if let error = error {
+                print("DEBUG: Failed to fetch user's workouts with error \(error.localizedDescription)")
+                return
+            }
+            
+            // Delete each workout document
+            snapshot?.documents.forEach { document in
+                workoutsCollection.document(document.documentID).delete { error in
+                    if let error = error {
+                        print("DEBUG: Failed to delete workout with error \(error.localizedDescription)")
+                    }
+                }
+            }
+            
+            // Delete user's account
+            guard let user = Auth.auth().currentUser else { return }
+            user.delete { error in
+                if let error = error {
+                    print("DEBUG: Failed to delete account with error \(error.localizedDescription)")
+                } else {
+                    // Account deleted successfully
+                    self.userSession = nil
+                    self.currentUser = nil
+                }
+            }
+        }
     }
     
     func fetchUser() async {
@@ -75,17 +105,16 @@ class AuthViewModel: ObservableObject{
         
         
     }
-    // Adds a new workout to Firestore
-    func addWorkout(exercise: String, reps: Int, weight: Double) {
+   
+    func addWorkout(exercise: String, reps: Int, weight: Double, date: Date) {
         guard let userID = self.userSession?.uid else { return }
-           
-        let workout = Workout(userID: userID, exercise: exercise, reps: reps, weight: weight)
+        let workout = Workout(userID: userID, exercise: exercise, reps: reps, weight: weight, date: date)
         do {
             let _ = try Firestore.firestore().collection("workouts").addDocument(from: workout)
         } catch {
-               print("DEBUG: Failed to add workout with error \(error.localizedDescription)")
-           }
-       }
+            print("DEBUG: Failed to add workout with error \(error.localizedDescription)")
+        }
+    }
     
     func fetchWorkouts() async {
         guard let userID = self.userSession?.uid else { return }

@@ -13,4 +13,14 @@ struct Workout: Codable, Identifiable {
     let exercise: String
     let reps: Int
     let weight: Double
+    let date: Date
+    
+    // Initialize with current date by default
+    init(userID: String, exercise: String, reps: Int, weight: Double, date: Date = Date()) {
+        self.userID = userID
+        self.exercise = exercise
+        self.reps = reps
+        self.weight = weight
+        self.date = date
+    }
 }
